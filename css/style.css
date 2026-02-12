@@ -217,4 +217,10 @@ section:nth-child(even){background:var(--light)}
 .about-hero-img{width:100%;border-radius:12px;margin:24px 0;object-fit:cover;max-height:400px}
 
 /* Services page images */
-.service-img{width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:16px}
+.service-img{width:100%;height:200px;object-fit:cover;border-radius:12px 12px 0 0;margin:0}
+.service-card .service-img+.service-card-header{border-radius:0}
+
+/* Ensure all body sections have visible text */
+section{color:var(--dark)}
+section h2,section h3,section h4{color:var(--navy)}
+section p,section li{color:var(--dark)}
