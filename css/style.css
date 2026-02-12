@@ -170,7 +170,7 @@ section:nth-child(even){background:var(--light)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:24px 0;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}
 
 /* ===== ANIMATIONS ===== */
-.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 
 /* ===== MOBILE NAV ===== */

@@ -167,6 +167,7 @@ hamburger.addEventListener('click',()=>{navLinks.classList.toggle('open');overla
 overlay.addEventListener('click',()=>{navLinks.classList.remove('open');overlay.classList.remove('open')});
 const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1});
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+setTimeout(()=>{document.querySelectorAll('.fade-up:not(.visible)').forEach(el=>el.classList.add('visible'))},1500);
 </script>
 </body>
 </html>
