@@ -385,7 +385,7 @@ section{padding:96px 0}
 
 /* Export Material List */
 .export-materials-section{padding:80px 0;background:var(--light)}
-.material-list-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.material-list-wrap{display:grid;grid-template-columns:1fr;gap:28px;margin-top:40px}
 .material-category{background:#fff;border-radius:14px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.06);border:1px solid #e5e7eb}
 .material-cat-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid var(--blue)}
 .material-cat-header i{font-size:1.3rem;color:var(--blue)}
@@ -415,5 +415,4 @@ section{padding:96px 0}
   .regions-grid{grid-template-columns:1fr}
   .export-products-grid{grid-template-columns:1fr}
   .export-why-grid{grid-template-columns:1fr}
-  .material-list-wrap{grid-template-columns:1fr}
 }
