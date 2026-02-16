@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Get a Free Estimate — Trendex Windows & Doors</title>
+  <meta name="description" content="Request a free, no-obligation estimate for impact windows, doors, and hurricane protection from Trendex. Serving South Florida since 1999.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo"><img src="images/header_img.png" alt="Trendex Windows + Doors"></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="estimate.html" class="nav-cta active">Free Estimate</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </div>
+</header>
+
+<!-- Estimate Hero -->
+<section class="estimate-hero">
+  <div class="container">
+    <div class="estimate-hero-text">
+      <span class="badge">🛡️ No-Obligation Quote</span>
+      <h1>Get Your Free Estimate</h1>
+      <p>Tell us about your project and our expert team will provide a detailed, transparent quote — typically within 24 hours.</p>
+      <div class="estimate-trust">
+        <div class="trust-item"><i class="fas fa-check-circle"></i> Free on-site measurement</div>
+        <div class="trust-item"><i class="fas fa-check-circle"></i> No high-pressure sales</div>
+        <div class="trust-item"><i class="fas fa-check-circle"></i> Detailed written proposal</div>
+        <div class="trust-item"><i class="fas fa-check-circle"></i> Price-match guarantee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Estimate Form Section -->
+<section class="estimate-form-section">
+  <div class="container">
+    <div class="estimate-layout">
+      <div class="estimate-form-wrap">
+        <h2>Tell Us About Your Project</h2>
+        <form onsubmit="return false">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="est-fname">First Name *</label>
+              <input type="text" id="est-fname" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label for="est-lname">Last Name *</label>
+              <input type="text" id="est-lname" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="est-email">Email Address *</label>
+              <input type="email" id="est-email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="est-phone">Phone Number *</label>
+              <input type="tel" id="est-phone" placeholder="(305) 555-0100" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="est-address">Property Address</label>
+            <input type="text" id="est-address" placeholder="123 Main St, Miami, FL 33101">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="est-type">Project Type *</label>
+              <select id="est-type" required>
+                <option value="">Select a project type</option>
+                <option>Impact Windows</option>
+                <option>Impact Doors</option>
+                <option>Windows & Doors</option>
+                <option>Hurricane Shutters</option>
+                <option>Storefront Systems</option>
+                <option>Commercial Project</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="est-timeline">Timeline</label>
+              <select id="est-timeline">
+                <option value="">When do you need this done?</option>
+                <option>ASAP — Emergency</option>
+                <option>Within 1 month</option>
+                <option>1–3 months</option>
+                <option>3–6 months</option>
+                <option>Just exploring options</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="est-details">Project Details</label>
+            <textarea id="est-details" rows="5" placeholder="Number of windows/doors, any specific brands you're interested in, special requirements..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="est-hear">How did you hear about us?</label>
+            <select id="est-hear">
+              <option value="">Select one</option>
+              <option>Google Search</option>
+              <option>Referral / Word of Mouth</option>
+              <option>Social Media</option>
+              <option>Drove By Showroom</option>
+              <option>Home Advisor / Angi</option>
+              <option>Repeat Customer</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Submit Estimate Request <i class="fas fa-arrow-right"></i></button>
+          <p class="form-disclaimer">By submitting, you agree to be contacted about your project. We never spam or share your info.</p>
+        </form>
+      </div>
+      <div class="estimate-sidebar">
+        <div class="sidebar-card">
+          <h4><i class="fas fa-phone"></i> Prefer to Call?</h4>
+          <p>Speak directly with our team:</p>
+          <a href="tel:3055923420" class="sidebar-phone">(305) 592-3420</a>
+        </div>
+        <div class="sidebar-card">
+          <h4><i class="fas fa-clock"></i> What Happens Next</h4>
+          <ol class="next-steps">
+            <li><strong>We review your request</strong> and reach out within 24 hours</li>
+            <li><strong>Free on-site visit</strong> to measure and assess your property</li>
+            <li><strong>Detailed written proposal</strong> with product options and pricing</li>
+            <li><strong>You decide</strong> — no pressure, no expiring quotes</li>
+          </ol>
+        </div>
+        <div class="sidebar-card">
+          <h4><i class="fas fa-award"></i> Why Trendex</h4>
+          <ul class="why-list">
+            <li>25+ years in South Florida</li>
+            <li>5,000+ projects completed</li>
+            <li>Licensed, bonded & insured</li>
+            <li>Authorized PGT & CGI dealer</li>
+            <li>Lifetime warranty on labor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (same as other pages) -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/header_img.png" alt="Trendex Windows + Doors" style="height:40px;margin-bottom:16px">
+        <p>South Florida's trusted source for premium impact windows, doors, and hurricane protection since 1999.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="estimate.html">Free Estimate</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> (305) 592-3420</li>
+          <li><i class="fas fa-envelope"></i> info@trendexwindows.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Pinecrest, FL</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Trendex Windows & Doors. All rights reserved. Licensed & Insured.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('scrolled',window.scrollY>20)});
+const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks'),overlay=document.getElementById('navOverlay');
+hamburger.addEventListener('click',()=>{navLinks.classList.toggle('open');overlay.classList.toggle('open')});
+overlay.addEventListener('click',()=>{navLinks.classList.remove('open');overlay.classList.remove('open')});
+</script>
+</body>
+</html>
