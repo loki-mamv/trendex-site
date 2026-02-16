@@ -86,6 +86,19 @@ section{padding:96px 0}
 .dark-section .section-label{color:rgba(255,255,255,.7)}
 .dark-section a{color:#fff}
 
+/* ===== BRAND BAR ===== */
+.brand-bar{background:var(--navy);padding:20px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.brand-bar .container{display:flex;align-items:center;gap:32px}
+.brand-bar-label{color:rgba(255,255,255,.45);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;white-space:nowrap;flex-shrink:0}
+.brand-bar-logos{display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:center;flex:1}
+.brand-bar-item{color:rgba(255,255,255,.55);font-size:1.15rem;font-weight:800;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
+.brand-bar-item:hover{color:rgba(255,255,255,.9)}
+@media(max-width:768px){
+  .brand-bar .container{flex-direction:column;gap:12px}
+  .brand-bar-logos{gap:24px}
+  .brand-bar-item{font-size:1rem}
+}
+
 /* ===== BENEFITS / CARDS ===== */
 .benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .benefit-card{background:var(--white);padding:36px 28px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;transition:transform var(--transition),box-shadow var(--transition)}
