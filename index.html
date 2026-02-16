@@ -166,6 +166,54 @@
   </div>
 </section>
 
+<!-- Testimonials -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">What Our Clients Say</span>
+      <h2 class="section-title">Trusted by South Florida Homeowners</h2>
+    </div>
+    <div class="testimonials-track-wrapper fade-up">
+      <div class="testimonials-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Trendex replaced every window in our house after Hurricane Ian. The crew was professional, clean, and finished a day early. Our energy bill dropped 30% the first month. Can't recommend them enough."</p>
+          <div class="testimonial-author"><strong>Maria & Carlos R.</strong><span>Coral Gables — 28 Windows</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We got quotes from five companies. Trendex wasn't the cheapest, but they were the most thorough. They walked us through every option, helped us pick the right product, and the install was flawless."</p>
+          <div class="testimonial-author"><strong>James T.</strong><span>Brickell — Condo Renovation</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"As a GC, I've worked with a lot of window installers. Trendex is the only one I trust on high-end custom homes. Their attention to detail and ability to handle complex openings is unmatched."</p>
+          <div class="testimonial-author"><strong>David M.</strong><span>General Contractor — 12 Projects</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The sliding doors transformed our living room. We went from a dark space to this incredible open feel with the bay right there. Trendex handled everything — permits, HOA approval, install. Zero stress."</p>
+          <div class="testimonial-author"><strong>Rachel & Tom K.</strong><span>Key Biscayne — Sliding Doors</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Had Trendex do our entire storefront in Wynwood. They understood the aesthetic we were going for and delivered exactly that. The impact glass gives our customers peace of mind during hurricane season."</p>
+          <div class="testimonial-author"><strong>Nina S.</strong><span>Wynwood — Commercial Storefront</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Third time using Trendex — first our house, then my parents' place, now our rental property. Consistent quality every time. Their warranty support is also excellent. Lifetime customer."</p>
+          <div class="testimonial-author"><strong>Alex P.</strong><span>Aventura — Repeat Client</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-nav">
+      <button class="testimonials-btn" onclick="scrollTestimonials(-1)"><i class="fas fa-chevron-left"></i></button>
+      <button class="testimonials-btn" onclick="scrollTestimonials(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
 <!-- About Preview -->
 <section>
   <div class="container">
@@ -332,6 +380,25 @@ function closeProjectModal(){
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProjectModal()});
+
+// Testimonials scroller
+const track=document.getElementById('testimonialTrack');
+let scrollAmt=0;
+function scrollTestimonials(dir){
+  const card=track.querySelector('.testimonial-card');
+  const w=card.offsetWidth+24;
+  const maxScroll=track.scrollWidth-track.parentElement.offsetWidth;
+  scrollAmt=Math.max(0,Math.min(maxScroll,scrollAmt+dir*w));
+  track.style.transform=`translateX(-${scrollAmt}px)`;
+}
+// Touch/drag support
+let isDragging=false,startX=0,startScroll=0;
+track.addEventListener('mousedown',e=>{isDragging=true;startX=e.pageX;startScroll=scrollAmt;track.classList.add('dragging')});
+window.addEventListener('mousemove',e=>{if(!isDragging)return;const diff=startX-e.pageX;const maxScroll=track.scrollWidth-track.parentElement.offsetWidth;scrollAmt=Math.max(0,Math.min(maxScroll,startScroll+diff));track.style.transform=`translateX(-${scrollAmt}px)`});
+window.addEventListener('mouseup',()=>{isDragging=false;track.classList.remove('dragging')});
+// Auto-scroll
+let autoDir=1;
+setInterval(()=>{const maxScroll=track.scrollWidth-track.parentElement.offsetWidth;if(scrollAmt>=maxScroll)autoDir=-1;if(scrollAmt<=0)autoDir=1;if(!isDragging)scrollTestimonials(autoDir)},4000);
 </script>
 </body>
 </html>
