@@ -15,8 +15,16 @@ h1,h2,h3,h4{line-height:1.25;color:var(--navy)}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 
 /* ===== HEADER ===== */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.05);transition:box-shadow var(--transition)}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.05);transition:all .3s ease}
 .site-header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.site-header.header-dark{background:transparent;backdrop-filter:none;border-bottom-color:transparent}
+.site-header.header-dark .nav-links a{color:rgba(255,255,255,.9)}
+.site-header.header-dark .nav-links a:hover,.site-header.header-dark .nav-links a.active{color:#fff}
+.site-header.header-dark .hamburger span{background:#fff}
+.site-header.header-dark.scrolled{background:rgba(11,42,74,.95);backdrop-filter:blur(12px);border-bottom-color:rgba(255,255,255,.1)}
+.site-header.header-dark.scrolled .nav-links a{color:rgba(255,255,255,.9)}
+.site-header.header-dark.scrolled .nav-cta{background:#fff;color:var(--navy)!important}
+.site-header.header-dark.scrolled .nav-cta:hover{background:#f0f0f0}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1200px;margin:0 auto}
 .logo img{height:48px;width:auto}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
