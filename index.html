@@ -121,29 +121,46 @@
       <p class="section-subtitle">See how Trendex transforms South Florida homes and businesses with premium impact solutions.</p>
     </div>
     <div class="gallery-grid fade-up">
-      <div class="gallery-item">
+      <div class="gallery-item" onclick="openProjectModal(0)">
         <img src="images/hero-home-1.jpg" alt="Modern South Florida home with impact windows" loading="lazy">
         <div class="gallery-overlay"><span>Residential Impact Windows</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" onclick="openProjectModal(1)">
         <img src="images/interior-windows-1.jpg" alt="Interior view of floor-to-ceiling impact windows" loading="lazy">
         <div class="gallery-overlay"><span>Floor-to-Ceiling Windows</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" onclick="openProjectModal(2)">
         <img src="images/sliding-doors-1.jpg" alt="Premium impact sliding glass doors" loading="lazy">
         <div class="gallery-overlay"><span>Impact Sliding Doors</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" onclick="openProjectModal(3)">
         <img src="images/commercial-storefront-1.jpg" alt="Commercial storefront with impact glass" loading="lazy">
         <div class="gallery-overlay"><span>Commercial Storefront</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" onclick="openProjectModal(4)">
         <img src="images/french-doors-1.jpg" alt="Elegant French doors with impact glass" loading="lazy">
         <div class="gallery-overlay"><span>French Doors</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" onclick="openProjectModal(5)">
         <img src="images/installation-team-1.jpg" alt="Professional installation team at work" loading="lazy">
         <div class="gallery-overlay"><span>Expert Installation</span></div>
+      </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+      <div class="project-modal-backdrop" onclick="closeProjectModal()"></div>
+      <div class="project-modal-content">
+        <button class="project-modal-close" onclick="closeProjectModal()">&times;</button>
+        <img class="project-modal-img" id="modalImg" src="" alt="">
+        <div class="project-modal-body">
+          <h3 class="project-modal-title" id="modalTitle"></h3>
+          <div class="project-modal-meta">
+            <div class="project-modal-tag" id="modalModel"></div>
+            <div class="project-modal-tag" id="modalColor"></div>
+          </div>
+          <p class="project-modal-desc" id="modalDesc"></p>
+        </div>
       </div>
     </div>
   </div>
@@ -252,6 +269,69 @@ overlay.addEventListener('click',()=>{navLinks.classList.remove('open');overlay.
 const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1});
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 setTimeout(()=>{document.querySelectorAll('.fade-up:not(.visible)').forEach(el=>el.classList.add('visible'))},1500);
+
+// Project Modal
+const projects=[
+  {
+    title:"Coral Gables Whole-Home Renovation",
+    model:"PGT WinGuard® Aluminum Series 7300",
+    color:"Bronze Anodized",
+    img:"images/hero-home-1.jpg",
+    desc:"Complete window and door replacement for a 4,200 sq ft Mediterranean-style home. 28 impact windows and 3 sliding door units installed over 5 days. The homeowner chose the WinGuard Aluminum series for its slim sightlines and high wind-load rating — rated for 180 mph winds. Energy savings estimated at 25% on annual cooling costs."
+  },
+  {
+    title:"South Beach Modern Condo — Floor-to-Ceiling Upgrade",
+    model:"CGI Sentinel by CGI Series 7200",
+    color:"White Interior / Black Exterior",
+    img:"images/interior-windows-1.jpg",
+    desc:"12 floor-to-ceiling fixed and operable impact windows for a 22nd-floor oceanfront unit. Dual-tone color scheme to match the modern interior while blending with the building's exterior. Laminated insulated glass with Low-E coating for UV protection and glare reduction. Project completed in 3 days with zero disruption to neighboring units."
+  },
+  {
+    title:"Brickell Key Waterfront Residence — Sliding Doors",
+    model:"PGT WinGuard® Vinyl Series 5500",
+    color:"White",
+    img:"images/sliding-doors-1.jpg",
+    desc:"Two 12-foot triple-panel sliding glass doors opening to a wraparound terrace. Impact-rated for large missile zones, these doors provide unobstructed views of Biscayne Bay while meeting Miami-Dade's strictest building codes. Argon-filled chambers deliver excellent thermal insulation. Includes multi-point locking hardware for enhanced security."
+  },
+  {
+    title:"Wynwood Commercial Storefront Build-Out",
+    model:"Custom Window Systems Series 8000 Storefront",
+    color:"Clear Anodized Aluminum",
+    img:"images/commercial-storefront-1.jpg",
+    desc:"Full storefront glazing system for a 3,500 sq ft retail space in the Wynwood Arts District. The system includes an impact-rated entrance door and 22 linear feet of fixed storefront glass. Designed to meet Florida Building Code for commercial high-velocity hurricane zones while maximizing natural light and street visibility."
+  },
+  {
+    title:"Coconut Grove Estate — French Door Installation",
+    model:"PGT WinGuard® Aluminum Series 7400 French Door",
+    color:"Sandstone",
+    img:"images/french-doors-1.jpg",
+    desc:"Matched pair of impact-rated French doors leading to a covered lanai and pool area. Colonial grid pattern with simulated divided lites for an authentic estate look. Hardware in antique brass finish. These doors replaced a 15-year-old non-impact set, bringing the home up to current hurricane code while preserving its classic character."
+  },
+  {
+    title:"Aventura High-Rise — Full Floor Installation",
+    model:"CGI Estate Collection Series 3300",
+    color:"Hartford Green",
+    img:"images/installation-team-1.jpg",
+    desc:"Our crew completing a 34-unit installation across an entire floor of a luxury high-rise. The project required coordination with building management for freight elevator scheduling, debris removal, and noise ordinance compliance. All units were installed and inspected within a 10-day window — 2 days ahead of schedule."
+  }
+];
+
+function openProjectModal(i){
+  const p=projects[i],m=document.getElementById('projectModal');
+  document.getElementById('modalImg').src=p.img;
+  document.getElementById('modalImg').alt=p.title;
+  document.getElementById('modalTitle').textContent=p.title;
+  document.getElementById('modalModel').textContent=p.model;
+  document.getElementById('modalColor').textContent=p.color;
+  document.getElementById('modalDesc').textContent=p.desc;
+  m.classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeProjectModal(){
+  document.getElementById('projectModal').classList.remove('active');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProjectModal()});
 </script>
 </body>
 </html>
