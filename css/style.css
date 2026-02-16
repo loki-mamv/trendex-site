@@ -31,6 +31,7 @@ h1,h2,h3,h4{line-height:1.25;color:var(--navy)}
 .site-header.header-dark.scrolled .nav-cta:hover{background:#f0f0f0}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1200px;margin:0 auto}
 .logo img{height:48px;width:auto}
+.header-dark .logo img{filter:brightness(0) invert(1)}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
 .nav-links a{font-weight:500;color:var(--dark);font-size:.95rem;position:relative;padding:4px 0}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--blue);transition:width var(--transition)}
@@ -43,7 +44,7 @@ h1,h2,h3,h4{line-height:1.25;color:var(--navy)}
 .hamburger span{width:24px;height:2px;background:var(--navy);transition:var(--transition)}
 
 /* ===== HERO ===== */
-.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:140px}
+.hero{min-height:calc(100vh - 90px);max-height:calc(100vh - 90px);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:120px}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0b2a4a 0%,#0ea8e4 50%,#89d4f5 100%);z-index:0}
 .hero-bg::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
 .hero-bg::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:120px;background:linear-gradient(to top,var(--white),transparent)}
@@ -93,12 +94,12 @@ section{padding:96px 0}
 .brand-bar-logos{display:flex;align-items:center;gap:32px;overflow:hidden;flex:1;mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
 .brand-bar-track{display:flex;align-items:center;gap:48px;animation:brandScroll 40s linear infinite;white-space:nowrap}
 .brand-bar-track:hover{animation-play-state:paused}
-.brand-logo{height:40px;width:auto;opacity:.6;filter:brightness(0) invert(1);transition:opacity .2s;flex-shrink:0}
+.brand-logo{height:53px;width:auto;opacity:.6;filter:brightness(0) invert(1);transition:opacity .2s;flex-shrink:0}
 .brand-logo:hover{opacity:1}
 @keyframes brandScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @media(max-width:768px){
   .brand-bar .container{flex-direction:column;gap:10px}
-  .brand-logo{height:30px}
+  .brand-logo{height:40px}
   .brand-bar-logos{mask-image:linear-gradient(to right,transparent,#000 20px,#000 calc(100% - 20px),transparent)}
 }
 
