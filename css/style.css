@@ -359,9 +359,26 @@ section p,section li{color:var(--dark)}
 .export-why-card h4{color:#fff;font-size:1.05rem;margin-bottom:10px}
 .export-why-card p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6}
 
+/* Material List */
+.export-materials-section{padding:80px 0;background:var(--light)}
+.material-list-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.material-category{background:#fff;border-radius:14px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.material-cat-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid var(--blue)}
+.material-cat-header i{font-size:1.3rem;color:var(--blue)}
+.material-cat-header h4{font-size:1.1rem;font-weight:700;color:var(--navy)}
+.material-items{list-style:none;display:flex;flex-direction:column;gap:12px}
+.material-items li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:10px;border-bottom:1px solid #f0f1f3}
+.material-items li:last-child{border-bottom:none;padding-bottom:0}
+.mat-label{font-weight:600;font-size:.9rem;color:var(--navy)}
+.mat-detail{font-size:.82rem;color:var(--gray);text-align:right;flex-shrink:0;max-width:55%}
+.material-cta{text-align:center;margin-top:32px;padding:20px;background:#fff;border-radius:12px;border:1px dashed var(--blue);color:var(--navy);font-size:.95rem}
+.material-cta a{color:var(--blue);font-weight:600;text-decoration:underline}
+.material-cta i{color:var(--blue);margin-right:6px}
+
 @media(max-width:768px){
   .export-stats-grid{grid-template-columns:repeat(2,1fr)}
   .regions-grid{grid-template-columns:1fr}
   .export-products-grid{grid-template-columns:1fr}
   .export-why-grid{grid-template-columns:1fr}
+  .material-list-wrap{grid-template-columns:1fr}
 }
