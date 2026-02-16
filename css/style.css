@@ -27,8 +27,8 @@ h1,h2,h3,h4{line-height:1.25;color:var(--navy)}
 .site-header.header-dark .hamburger span{background:#fff}
 .site-header.header-dark.scrolled{background:rgba(11,42,74,.95);backdrop-filter:blur(12px);border-bottom-color:rgba(255,255,255,.1)}
 .site-header.header-dark.scrolled .nav-links a{color:rgba(255,255,255,.9)}
-.site-header.header-dark.scrolled .nav-cta{background:#fff;color:var(--navy)!important}
-.site-header.header-dark.scrolled .nav-cta:hover{background:#f0f0f0}
+.site-header.header-dark.scrolled .nav-links a.nav-cta{background:#fff;color:var(--navy)!important}
+.site-header.header-dark.scrolled .nav-links a.nav-cta:hover{background:#f0f0f0}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1200px;margin:0 auto}
 .logo img{height:48px;width:auto}
 .header-dark .logo img{filter:brightness(0) invert(1)}
@@ -37,9 +37,9 @@ h1,h2,h3,h4{line-height:1.25;color:var(--navy)}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--blue);transition:width var(--transition)}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
 .nav-links a:hover,.nav-links a.active{color:var(--blue)}
-.nav-cta{background:var(--blue);color:#fff!important;padding:14px 48px;border-radius:50px;font-weight:600;font-size:.95rem;white-space:nowrap;line-height:1}
-.nav-cta::after{display:none!important}
-.nav-cta:hover{background:var(--navy);color:var(--white)!important}
+.nav-links a.nav-cta{background:var(--blue);color:#fff!important;padding:14px 48px;border-radius:50px;font-weight:600;font-size:.95rem;white-space:nowrap;line-height:1;display:inline-block}
+.nav-links a.nav-cta::after{display:none!important}
+.nav-links a.nav-cta:hover{background:var(--navy);color:#fff!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
 .hamburger span{width:24px;height:2px;background:var(--navy);transition:var(--transition)}
 
@@ -228,6 +228,7 @@ section{padding:96px 0}
   .nav-links.open{right:0}
   .nav-links a{color:var(--dark)!important}
   .nav-links a.active{color:var(--blue)!important}
+  .nav-links a.nav-cta{color:#fff!important;padding:14px 48px;background:var(--blue);border-radius:50px}
   .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:998}
   .nav-overlay.open{display:block}
   .hero .container{grid-template-columns:1fr}
