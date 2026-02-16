@@ -93,12 +93,12 @@ section{padding:96px 0}
 .brand-bar-logos{display:flex;align-items:center;gap:32px;overflow:hidden;flex:1;mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
 .brand-bar-track{display:flex;align-items:center;gap:48px;animation:brandScroll 40s linear infinite;white-space:nowrap}
 .brand-bar-track:hover{animation-play-state:paused}
-.brand-logo{height:28px;width:auto;opacity:.6;filter:brightness(0) invert(1);transition:opacity .2s;flex-shrink:0}
+.brand-logo{height:40px;width:auto;opacity:.6;filter:brightness(0) invert(1);transition:opacity .2s;flex-shrink:0}
 .brand-logo:hover{opacity:1}
 @keyframes brandScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @media(max-width:768px){
   .brand-bar .container{flex-direction:column;gap:10px}
-  .brand-logo{height:22px}
+  .brand-logo{height:30px}
   .brand-bar-logos{mask-image:linear-gradient(to right,transparent,#000 20px,#000 calc(100% - 20px),transparent)}
 }
 
