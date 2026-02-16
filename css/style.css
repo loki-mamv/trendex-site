@@ -303,3 +303,57 @@ section p,section li{color:var(--dark)}
 .hero-badge{display:flex;align-items:center;gap:8px;font-size:.85rem;color:rgba(255,255,255,.8);font-weight:500}
 .hero-badge i{color:#4ade80;font-size:.9rem}
 @media(max-width:600px){.hero-ctas{flex-direction:column;align-items:center}.hero-badges{gap:14px}}
+
+/* Export Page */
+.export-hero{background:linear-gradient(135deg,rgba(11,42,74,.9),rgba(14,168,228,.65)),url('images/commercial-storefront-1.jpg') center/cover no-repeat;padding:160px 0 80px;color:#fff;text-align:center}
+.export-hero-inner{max-width:780px;margin:0 auto}
+.export-hero-inner h1{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:800;margin-bottom:20px;color:#fff;line-height:1.15}
+.export-hero-inner p{font-size:1.15rem;opacity:.9;margin:0 auto 36px;max-width:620px;color:#fff}
+
+.export-stats-section{padding:60px 0;background:#fff;border-bottom:1px solid #f0f0f0}
+.export-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.export-stat{padding:20px}
+.export-stat-icon{font-size:1.8rem;color:var(--blue);margin-bottom:12px}
+.export-stat-number{font-size:2.8rem;font-weight:800;color:var(--navy);line-height:1}
+.export-stat-label{font-size:.85rem;color:#888;margin-top:6px;text-transform:uppercase;letter-spacing:.04em}
+
+.regions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.region-card{background:#fff;border-radius:14px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,.05);border:1px solid rgba(0,0,0,.06)}
+.region-icon{font-size:2rem;color:var(--blue);margin-bottom:16px}
+.region-card h3{color:var(--navy);font-size:1.15rem;margin-bottom:14px}
+.region-list{list-style:none;padding:0}
+.region-list li{padding:6px 0;font-size:.9rem;color:#555;border-bottom:1px solid #f5f5f5;display:flex;align-items:center;gap:8px}
+.region-list li:last-child{border-bottom:none}
+.region-list li::before{content:'📍';font-size:.75rem}
+
+.export-process-section{background:#f8f9fb;padding:80px 0}
+.process-steps{max-width:800px;margin:0 auto}
+.process-step{display:flex;gap:28px;margin-bottom:36px;align-items:flex-start}
+.step-number{min-width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;font-size:1.2rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-content h3{color:var(--navy);font-size:1.15rem;margin-bottom:8px}
+.step-content p{font-size:.95rem;color:#555;line-height:1.6}
+
+.export-products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.export-product{background:#fff;border-radius:14px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,.05);border:1px solid rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s}
+.export-product:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.1)}
+.export-product-icon{font-size:2rem;color:var(--blue);margin-bottom:16px}
+.export-product h4{color:var(--navy);font-size:1.15rem;margin-bottom:10px}
+.export-product p{font-size:.9rem;color:#555;line-height:1.6;margin-bottom:14px}
+.product-specs{list-style:none;padding:0}
+.product-specs li{padding:5px 0;font-size:.85rem;color:#666;display:flex;align-items:center;gap:8px}
+.product-specs li::before{content:'✓';color:#4ade80;font-weight:700}
+
+.export-why-section{background:linear-gradient(135deg,var(--navy),#1a4a7a);padding:80px 0;color:#fff}
+.export-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.export-why-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px;transition:background .3s}
+.export-why-card:hover{background:rgba(255,255,255,.12)}
+.export-why-card i{font-size:1.6rem;color:#4ade80;margin-bottom:14px}
+.export-why-card h4{color:#fff;font-size:1.05rem;margin-bottom:10px}
+.export-why-card p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6}
+
+@media(max-width:768px){
+  .export-stats-grid{grid-template-columns:repeat(2,1fr)}
+  .regions-grid{grid-template-columns:1fr}
+  .export-products-grid{grid-template-columns:1fr}
+  .export-why-grid{grid-template-columns:1fr}
+}
