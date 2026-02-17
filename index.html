@@ -18,7 +18,7 @@
 <!-- Header -->
 <header class="site-header header-dark" id="header">
   <div class="header-inner">
-    <a href="index.html" class="logo"><img src="images/header_img.png" alt="Trendex Windows + Doors"></a>
+    <a href="index.html" class="logo">TRENDEX<span>Windows + Doors</span></a>
     <nav>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Home</a></li>
@@ -385,6 +385,19 @@ function closeProjectModal(){
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProjectModal()});
+
+// Brand bar seamless loop fix
+(function(){
+  const t=document.querySelector('.brand-bar-track');
+  if(!t)return;
+  // Remove existing duplicate logos, rebuild from first half
+  const logos=[...t.querySelectorAll('.brand-logo')];
+  const half=Math.ceil(logos.length/2);
+  // Keep only first half
+  logos.slice(half).forEach(l=>l.remove());
+  // Clone first half and append
+  logos.slice(0,half).forEach(l=>t.appendChild(l.cloneNode(true)));
+})();
 
 // Testimonials scroller
 const track=document.getElementById('testimonialTrack');

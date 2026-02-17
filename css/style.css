@@ -30,8 +30,12 @@ h1,h2,h3,h4{line-height:1.25;color:var(--navy)}
 .site-header.header-dark.scrolled .nav-links a.nav-cta{background:#fff;color:var(--navy)!important}
 .site-header.header-dark.scrolled .nav-links a.nav-cta:hover{background:#f0f0f0}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1200px;margin:0 auto}
-.logo img{height:48px;width:auto}
-.header-dark .logo img{filter:brightness(0) invert(1)}
+.logo{font-size:1.5rem;font-weight:800;color:var(--navy);text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--blue);font-weight:400;font-size:.65em;display:block;letter-spacing:.08em;text-transform:uppercase;margin-top:-2px}
+.header-dark .logo{color:#fff}
+.header-dark .logo span{color:rgba(255,255,255,.7)}
+.header-dark.scrolled .logo{color:var(--navy)}
+.header-dark.scrolled .logo span{color:var(--blue)}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
 .nav-links a{font-weight:500;color:var(--dark);font-size:.95rem;position:relative;padding:4px 0}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--blue);transition:width var(--transition)}
@@ -92,7 +96,7 @@ section{padding:96px 0}
 .brand-bar .container{display:flex;align-items:center;gap:24px}
 .brand-bar-label{color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;white-space:nowrap;flex-shrink:0}
 .brand-bar-logos{display:flex;align-items:center;gap:32px;overflow:hidden;flex:1;mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
-.brand-bar-track{display:flex;align-items:center;gap:48px;animation:brandScroll 20s linear infinite;white-space:nowrap}
+.brand-bar-track{display:flex;align-items:center;gap:48px;animation:brandScroll 30s linear infinite;white-space:nowrap;will-change:transform}
 .brand-bar-track:hover{animation-play-state:paused}
 .brand-logo{height:53px;width:auto;opacity:.6;filter:brightness(0) invert(1);transition:opacity .2s;flex-shrink:0}
 .brand-logo:hover{opacity:1}
